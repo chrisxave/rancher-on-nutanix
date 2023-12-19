@@ -34,11 +34,11 @@ rke:
 # global nutanix nodepool configs. These configs can be overriden within each nodepool.
 global:
   nodepools:
-    cluster: PHX-SPOC020-1
+    cluster: DM3-POC062
     project: BootcampInfra
     vmImage: ubuntu-22.04-server-cloudimg-amd64.img
     vmNetwork:
-    - vlan2010
+    - Primary
     vmCategories: 
     - AppType=Kubernetes
     cloudInit: |-
@@ -59,7 +59,7 @@ nodepools:
 - etcd: false
   controlplane: true
   worker: false
-  quantity: 1
+  quantity: 2
   name: control
 
 ## etcd nodepool configs
@@ -73,7 +73,7 @@ nodepools:
 - etcd: false
   controlplane: false
   worker: true
-  quantity: 1
+  quantity: 3
   name: worker
 
 ## example additional worker nodepool with overridden configs

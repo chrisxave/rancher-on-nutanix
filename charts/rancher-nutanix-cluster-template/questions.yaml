@@ -51,7 +51,7 @@ questions:
 ## global
 - variable: global.nodepools.cluster
   label: "Cluster"
-  default: "PHX-SPOC020-1"
+  default: "DM3-POC062"
   type: hostname
   description: "Target Nutanix Prism Element / AHV Cluster"
   required: true
@@ -70,7 +70,7 @@ questions:
   group: "Global"
 - variable: global.nodepools.vmNetwork
   label: "Network"
-  default: ["vlan2010"]
+  default: ["Primary"]
   type: string
   description: "Nutanix network where the virtual machine will be attached"
   group: "Global"
